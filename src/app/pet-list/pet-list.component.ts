@@ -19,9 +19,11 @@ export class PetListComponent implements OnInit {
 
   ngOnInit() {
     this.user = this.userService.getUser();
-    this.petService.getPetsByID(this.user._id, localStorage.getItem('token')).subscribe(pets => {
-      this.pets = pets;
-    });
+    if(this.user) {
+      this.petService.getPetsByID(this.user._id, localStorage.getItem('token')).subscribe(pets => {
+        this.pets = pets;
+      });
+    }
   }
 
   clickPetDetail(petID: string) {

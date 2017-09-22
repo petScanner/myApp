@@ -4,7 +4,8 @@
 <!-- the component as the initial center of the map: -->
 <div class="container-fluid">
   <div class="row">
-    <agm-map [latitude]="lat"  [longitude]="lng"  [scaleControl]="true" (boundsChange)="change($event)">
+    <p *ngIf="locationFail">{{locationFail}}</p>
+    <agm-map [latitude]="lat"  [longitude]="lng"  [zoom]="13" [scaleControl]="true" (boundsChange)="change($event)">
       <agm-marker [latitude]="lat" [longitude]="lng" ></agm-marker>
       <agm-marker [latitude]="40.714" [longitude]="-74.00599999999997"></agm-marker>
       <agm-marker class="agm-marker" *ngIf="point" [latitude]="point.lat" [label]="point.pet.name" [longitude]="point.lng" >

@@ -3,7 +3,7 @@
     <div class="heading">
       <h2>user edit</h2>
     </div>
-    <form>
+    <form *ngIf="user">
       <div class="form-group">
         <label for="firstName">First Name</label>
         <input type="text" [(ngModel)]="user.firstName" name="name" class="form-control" id="firstName">

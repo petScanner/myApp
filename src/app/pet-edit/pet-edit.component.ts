@@ -26,7 +26,6 @@ export class PetEditComponent implements OnInit {
   constructor(private petService: PetService) { }
 
   ngOnInit() {
-    console.log(this.pet);
   }
 
   onClick() {

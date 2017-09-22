@@ -3,7 +3,6 @@ import {LostPetsService} from "../lost-pets.service";
 import {Pet} from "../pet.model";
 
 
-
 @Component({
   selector: 'app-lost-pets',
   templateUrl: './lost-pets.component.html',
@@ -18,6 +17,7 @@ import {Pet} from "../pet.model";
 export class LostPetsComponent implements OnInit {
 
   title: string = 'Lost Pets';
+  locationFail: string;
   lat: number = 51.678418;
   lng: number = 7.809007;
   point: PetMarker;
@@ -31,6 +31,7 @@ export class LostPetsComponent implements OnInit {
   ngOnInit() {
     this.getLocation();
   }
+
   // call when user change bounds (viewable area)
   // send request to the server for lost pets
   change($event) {
@@ -44,7 +45,8 @@ export class LostPetsComponent implements OnInit {
         this.point = {
           lng: this.pets[0].lostInfo.location.coordinates[0],
           lat: this.pets[0].lostInfo.location.coordinates[1],
-          draggable: false, pet: this.pets[0]};
+          draggable: false, pet: this.pets[0]
+        };
       }
 
     });
@@ -56,12 +58,18 @@ export class LostPetsComponent implements OnInit {
   getLocation() {
     if ('geolocation' in navigator) {
       let self = this;
+      this.locationFail = '';
+
       navigator.geolocation.getCurrentPosition(function (position) {
         self.lng = position.coords.longitude;
         self.lat = position.coords.latitude;
+      }, function (error) {
+        self.locationFail = `Please enable location services or use supported web browser to get your possition. 
+           Error type: ` + error.message;
       });
+
     } else {
-      console.log('fail');
+      this.locationFail = 'Please enable location services or use supported web browser to get your possition'
     }
   }
 }

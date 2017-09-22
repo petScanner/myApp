@@ -20,8 +20,10 @@ export class UserEditComponent implements OnInit {
 
   ngOnInit() {
     this.user = this.userService.getUser();
-    this.confirmEmail = this.user.email;
-    this.confirmPhone = this.user.phone;
+    if(this.user) {
+      this.confirmEmail = this.user.email;
+      this.confirmPhone = this.user.phone;
+    }
   }
 
   backClicked() {

@@ -19,9 +19,10 @@ export class ScansComponent implements OnInit {
 
   ngOnInit() {
     this.user =  this.userService.getUser();
-    const token = localStorage.getItem('token');
-    this.getScans(this.user._id, token);
-
+    if(this.user) {
+      const token = localStorage.getItem('token');
+      this.getScans(this.user._id, token);
+    }
   }
 
   getScans(userID: string, token: string) {
