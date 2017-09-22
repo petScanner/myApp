@@ -30,11 +30,13 @@ export class PetDetailComponent implements OnInit {
   ngOnInit() {
     // get user
     this.user = this.userService.getUser();
-    let petID;
-    this.activatedRoute.params.subscribe(params => {
-      petID = params.id;
-      this.getPet(this.user._id, petID, localStorage.getItem('token'));
-    });
+    if(this.user) {
+      let petID;
+      this.activatedRoute.params.subscribe(params => {
+        petID = params.id;
+        this.getPet(this.user._id, petID, localStorage.getItem('token'));
+      });
+    }
   }
 
 

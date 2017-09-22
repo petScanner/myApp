@@ -9,7 +9,7 @@ import {Scan} from './scan.model';
 @Injectable()
 export class ScansService {
 
-  private apiServer = 'https://pet-scanner-api.herokuapp.com/';
+  private apiServer = 'https://pet-scanner-api.herokuapp.com/scans/';
 
   constructor(private http: Http, private userService: UserService) {}
 
