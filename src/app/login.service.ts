@@ -16,7 +16,7 @@ export class LoginService {
     const headers = new Headers();
     const body = JSON.stringify({email: email, password: password});
     headers.append('Content-Type', 'application/json');
-    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Origin' , 'https://petscanner.github.io');
     const options = new RequestOptions({ headers: headers });
     return this.http.post(this.apiServer + 'login', body, options)
       .map(response => {
