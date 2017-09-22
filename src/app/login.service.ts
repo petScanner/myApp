@@ -7,7 +7,7 @@ import {UserService} from './user.service';
 
 @Injectable()
 export class LoginService {
-  private apiServer = 'http://localhost:3000/auth/';
+  private apiServer = 'https://petscanner-api.herokuapp.com/auth/';
 
 
   constructor(private http: Http, private userService: UserService) {}
