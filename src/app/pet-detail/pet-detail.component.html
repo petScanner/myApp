@@ -1,0 +1,75 @@
+<div class="container-fluid">
+  <div *ngIf="pet">
+    <div class="row pet" *ngIf="petDetail">
+      <div class="heading" [class.lost]="pet.status ===3" [class.re-home]="pet.status ===2">
+        <div class="img-frame">
+          <img
+            src="https://indigodesigned.com/share/embed/jjbn0rvemqkv/n3zqrp/assets/french%20bulldog%20boston%20terrier.jpg">
+        </div>
+        <div class="info">
+          <h3>{{pet.name}}</h3>
+          <div class="gender">
+            <i *ngIf="pet.gender" class="fa fa-mars" aria-hidden="true"></i>
+            <i *ngIf="!pet.gender " class="fa fa-venus" aria-hidden="true"></i></div>
+          <p>{{pet.breed}}</p>
+          <p>{{pet.colour}} and {{pet.colour2}}</p>
+          <p class="chip">Chip number</p>
+          <span class="pet-id">{{pet.id}}</span>
+          <p><span class="subs">Subscription expires:</span> 24/8/2018</p>
+        </div>
+      </div>
+      <div class="dashboard">
+        <div class="desc">
+          <h4>Description</h4>
+          <p>{{pet.desc}}</p>
+        </div>
+        <div class="icons">
+          <div class="icon" (click)="openScans()">
+            <i class="fa fa-hourglass-end" aria-hidden="true"></i>
+            <div>scan history</div>
+          </div>
+          <div class="icon" [class.lost]="pet.status ===2">
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            <div *ngIf="pet.status ===1 || pet.status === 2">mark as lost</div>
+            <div *ngIf="pet.status ===3">mark as found</div>
+          </div>
+          <div class="icon" (click)="openTemp()">
+            <i class="fa fa-bar-chart" aria-hidden="true"></i>
+            <div>temperature</div>
+          </div>
+          <div class="icon" [class.lost]=" pet.status ===2" (click)="openEdit()">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            <div>edit</div>
+          </div>
+          <div class="icon" [class.lost]="pet.status ===3">
+            <div *ngIf="pet.status==2" (click)="cancelRehome(pet.id)">
+              <i class="fa fa-home" aria-hidden="true"></i>
+              <div>cancel <br> rehome</div>
+            </div>
+            <div *ngIf="pet.status !==2">
+              <i class="fa fa-home" aria-hidden="true"></i>
+              <div *ngIf="pet.status !==2">rehome</div>
+            </div>
+          </div>
+          <div class="icon" *ngIf="pet.status !==2">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+            <div>cancel subscription</div>
+          </div>
+          <div class="icon lost" *ngIf="pet.status ===2">
+            <i class="fa fa-refresh" aria-hidden="true"></i>
+            <div>update subscription</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" *ngIf="showScan">
+      <app-pet-scan (close)="openScans()" [Name]="pet.name" [ID]="pet.id" [RegisteredDate]="pet.createdAt"></app-pet-scan>
+    </div>
+    <div class="row" *ngIf="petEdit">
+      <app-pet-edit [pet]="pet" (close)="openEdit()"></app-pet-edit>
+    </div>
+    <div class="row" *ngIf="petTemp">
+      <app-temperature [pet]="pet" (close)="openTemp()"></app-temperature>
+    </div>
+  </div>
+</div>

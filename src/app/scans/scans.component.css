@@ -1,0 +1,53 @@
+.heading {
+  background-color: #E2E2E2;
+  width: 100%;
+  text-align: center;
+  border: solid #666666 2px;
+  border-left-width: 0;
+  border-right-width: 0; }
+  .heading h2 {
+    text-transform: capitalize;
+    font-weight: 200; }
+
+.scans {
+  width: 100%;
+  height: 74vh;
+  overflow: scroll; }
+
+.scan {
+  display: flex;
+  width: 97%;
+  margin: auto;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 1rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: solid #666666 0.8px; }
+  .scan i {
+    color: #6397C4;
+    font-size: 2rem; }
+  .scan .number {
+    width: 12%; }
+  .scan .paw {
+    width: 12%; }
+  .scan .name {
+    text-transform: capitalize;
+    width: 33%;
+    font-weight: 600; }
+  .scan .date {
+    max-width: 30%;
+    text-align: center; }
+  .scan .loc {
+    width: 10%;
+    text-align: left; }
+
+.back {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  color: #666666;
+  background-color: #E2E2E2;
+  border-top: solid #666666 0.8px; }
+
+/*# sourceMappingURL=scans.component.css.map */

@@ -1,0 +1,46 @@
+.background {
+  background-color: #E2E2E2;
+  height: 91vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.logo {
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-color: #F0F0F0; }
+
+.reg-type {
+  width: 80%;
+  text-align: center; }
+  .reg-type p {
+    font-size: 25px;
+    font-weight: bold;
+    margin: .7rem .7rem; }
+  .reg-type .button-icons {
+    position: absolute;
+    bottom: 10px;
+    left: 4rem;
+    margin-right: 1rem; }
+  .reg-type button {
+    position: relative;
+    width: 100%;
+    background-color: #8AB1D3;
+    border: #000000 solid 1px;
+    margin-bottom: 1.2rem;
+    border-radius: 10px;
+    font-size: 20px !important;
+    color: #ffffc6; }
+    .reg-type button:hover, .reg-type button:focus {
+      background-color: #A6C2D9; }
+
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) {
+  .reg-type {
+    width: 45%; } }
+@media screen and (min-width: 769px) {
+  .reg-type {
+    width: 25%; } }
+
+/*# sourceMappingURL=login-type.component.css.map */

@@ -1,0 +1,26 @@
+.heading {
+  background-color: #E2E2E2;
+  width: 100%;
+  text-align: center;
+  border: solid #666666 2px;
+  border-left-width: 0;
+  border-right-width: 0; }
+  .heading h2 {
+    text-transform: capitalize;
+    font-weight: 200; }
+
+form {
+  width: 90%;
+  margin: 2rem auto; }
+
+button {
+  position: relative;
+  background-color: #8AB1D3;
+  border: #000000 solid 1px;
+  margin-bottom: 1.2rem;
+  border-radius: 4px;
+  font-size: 20px !important; }
+  button:hover, button:focus {
+    background-color: #A6C2D9; }
+
+/*# sourceMappingURL=pet-edit.component.css.map */

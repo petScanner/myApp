@@ -1,0 +1,60 @@
+$grey :#E2E2E2;
+$lightBlue : #8AB1D3;
+$lightBlueHover: #A6C2D9;
+$yellow: #ffffc6;
+
+.background{
+  background-color: $grey;
+  height: 91vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo{
+  display: block;
+  width: 200px;
+  height:200px;
+  background-color: #F0F0F0;
+}
+.reg-type {
+  width: 80%;
+  text-align: center;
+  p {
+    font-size: 25px;
+    font-weight: bold;
+    margin: .7rem .7rem;
+
+  }
+  .button-icons{
+    position: absolute;
+    bottom: 10px;
+    left: 4rem;
+    margin-right: 1rem;
+  }
+  button {
+    position: relative;
+    width: 100%;
+    background-color: $lightBlue;
+    border: #000000 solid 1px;
+    margin-bottom: 1.2rem;
+    border-radius: 10px;
+    font-size: 20px !important;
+    color: $yellow;
+    &:hover, &:focus{
+      background-color: $lightBlueHover;
+    }
+  }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) {
+  .reg-type{
+    width: 45%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .reg-type{
+    width: 25%;
+  }
+}

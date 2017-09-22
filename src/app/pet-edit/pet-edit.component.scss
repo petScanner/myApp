@@ -1,0 +1,41 @@
+$grey :#E2E2E2;
+$lightBlue : #8AB1D3;
+$darkBlue : #417BAD;
+$lightBlueHover: #A6C2D9;
+$mediumBlue: #6397C4;
+$yellow: #ffffc6;
+$darkGrey: #666666;
+$mediumGrey: #888888;
+$lightBlack: #383838;
+$lost: #874006;
+
+.heading {
+  background-color:$grey;
+  width: 100%;
+  text-align: center;
+  border: solid $darkGrey 2px;
+  border-left-width: 0;
+  border-right-width: 0;
+  h2 {
+    text-transform: capitalize;
+    font-weight: 200;
+  }
+}
+
+form {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+button {
+  position: relative;
+  background-color: $lightBlue;
+  border: #000000 solid 1px;
+  margin-bottom: 1.2rem;
+  border-radius: 4px;
+  font-size: 20px !important;
+
+  &:hover, &:focus{
+    background-color: $lightBlueHover;
+  }
+}

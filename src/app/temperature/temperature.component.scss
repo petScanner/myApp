@@ -1,0 +1,77 @@
+$grey :#E2E2E2;
+$lightBlue : #8AB1D3;
+$darkBlue : #417BAD;
+$lightBlueHover: #A6C2D9;
+$mediumBlue: #6397C4;
+$yellow: #ffffc6;
+$darkGrey: #666666;
+$mediumGrey: #888888;
+$lightBlack: #383838;
+$lost: #874006;
+
+.heading {
+  width: 100%;
+  background-color: $lightBlack;
+  color: #FFFFFF;
+  padding: .5rem;
+  border-bottom: 5px solid $darkGrey;
+  .chip-number{
+    vertical-align: middle;
+    display: inline-block;
+    width: 49%;
+    overflow: hidden;
+    white-space: pre-line;
+    span {
+      float: left;
+
+      &.number{
+        font-weight: bold;
+      }
+    }
+  }
+  h2{
+    width: 49%;
+    display: inline-block;
+    font-size: 1.7rem;
+    vertical-align: -webkit-baseline-middle;
+  }
+}
+.temperatures{
+  width: 100%;
+  background-color: #FFFFFF;
+  color: #000000;
+  .temperature{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+    padding: .5rem 0;
+
+    i{
+      color: $mediumBlue;
+
+    };
+
+    .number{
+      min-width: 12%;
+      text-align: center;
+    }
+    .avatar{
+
+    }
+    .name{
+      width: 32%;
+      .name-value{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+    .heart{
+      font-size: 1.7rem;
+      width: 44%;
+      text-align: center;
+    }
+  }
+
+}

@@ -1,0 +1,22 @@
+<div class="background">
+  <div *ngIf="pets">
+    <div *ngFor="let pet of pets" (click)="clickPetDetail(pet.id)" class="pet" [class.lost]="pet.status === 3" [class.re-home]="pet.status === 2">
+      <div class="img">
+        <img class="pet-img"
+             src="https://indigodesigned.com/share/embed/jjbn0rvemqkv/n3zqrp/assets/french%20bulldog%20boston%20terrier.jpg">
+      </div>
+      <div class="desc">
+        <h5>{{pet.name}}</h5>
+        <p>{{pet.breed}}</p>
+        <p>{{pet.colour}} and {{pet.colour2}}</p>
+      </div>
+      <div class="status">
+        <i *ngIf="pet.status ===1" class="fa fa-bars" aria-hidden="true"></i>
+        <i *ngIf="pet.status ===3" class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        <i *ngIf="pet.status ===2" class="fa fa-home" aria-hidden="true"></i>
+
+      </div>
+
+    </div>
+  </div>
+</div>

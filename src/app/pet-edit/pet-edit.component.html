@@ -1,0 +1,74 @@
+<div class="background">
+  <div class="heading">
+    <h2>Pet  Edit</h2>
+  </div>
+  <form>
+    <div class="form-row">
+      <div class="form-group col-sm-12">
+        <label for="petName" class="sr-only">Pet Name</label>
+        <input class="form-control" [(ngModel)]='pet.name'  name="name" type="text" id="petName" placeholder="Name">
+      </div>
+      <div class="form-group col">
+        <label for="species" class="sr-only">Species</label>
+        <select [(ngModel)]='pet.species' name="species"  class="form-control" id="species">
+          <option value=""  disabled>Species</option>
+          <option *ngFor="let species of speciesArray" [ngValue]="species">{{species}}</option>
+        </select>
+      </div>
+      <div class="form-group col">
+        <label for="gender" class="sr-only">Gender</label>
+        <select [(ngModel)]='pet.gender' class="form-control" type="" name="gender" id="gender">
+          <option value=""  disabled>Gender</option>
+          <option value="true">Male</option>
+          <option value="false">Female</option>
+        </select>
+      </div>
+      <div class="form-group col-sm-12">
+        <label for="breed" class="sr-only">Breed</label>
+        <select class="form-control" [(ngModel)]="pet.breed" type="" id="breed" name="breed">
+          <option value="" selected disabled>Breed</option>
+          <option *ngFor="let breed of breeds" [ngValue]="breed">{{breed}}</option>
+        </select>
+      </div>
+      <div class="form-group col">
+        <label for="colour1" class="sr-only">Colour 1</label>
+        <select class="form-control" [(ngModel)]="pet.colour" name="color1" type="" id="colour1">
+          <option value="" selected disabled>Colour 1</option>
+          <option *ngFor="let color of colorsArray" [ngValue]="color">{{color}}</option>
+        </select>
+      </div>
+      <div class="form-group col">
+        <label for="colour2" class="sr-only">Colour 2</label>
+        <select class="form-control" [(ngModel)]="pet.colour2" name="color2" type="" id="colour2">
+          <option value="" selected disabled>Colour 1</option>
+          <option *ngFor="let color of colorsArray" [ngValue]="color">{{color}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-6">
+        <label for="birth" class="col-form-label">Birth Date</label>
+        <input type="date" [ngModel]="pet.birthDate | date:'yyyy-MM-dd'" (ngModelChange)="pet.birthDate = $event" name="birth" id="birth" class="form-control">
+      </div>
+      <div class="form-group col-6">
+        <label for="implant" class="col-form-label">Implant Date</label>
+        <input type="date"  id="implant" name="implnat" [ngModel]="pet.implantDate | date:'yyyy-MM-dd'" (ngModelChange)="pet.implantDate = $event" class="form-control">
+      </div>
+      <div class="form-group col-12">
+        <label for="neutered" class="sr-only">Neutered</label>
+        <select [(ngModel)]='pet.neutered' class="form-control" type="" name="neutered" id="neutered">
+          <option value=""  disabled>Neutered</option>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+      </div>
+      <div class="form-group col-12">
+        <label for="desc" class="sr-only">About Pet</label>
+        <textarea class="form-control" id="desc"  name="desc" [(ngModel)]="pet.desc" placeholder="About your Pet (Max 140 Characters)" rows="3"></textarea>
+      </div>
+    </div>
+    <div class="form-group text-center">
+      <button (click)="onClick()" class="btn-primary btn">Finish Editing</button>
+    </div>
+  </form>
+</div>

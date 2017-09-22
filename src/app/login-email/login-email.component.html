@@ -1,0 +1,25 @@
+<div class="container-fluid">
+<div class="row background">
+  <div class="logo" [routerLink]="['/login']">
+
+  </div>
+  <br>
+  <div class="reg-type">
+    <p>Enter details bellow </p>
+    <form>
+      <div class="form-group">
+        <input class="form-control" #_email (blur)="checkEmail(_email.value)" [ngClass]="{'is-invalid': email===false, 'is-valid': email===true}" type="email" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <input class="form-control" #_password type="password" (blur)="checkPassword(_password.value)" [ngClass]="{'is-invalid': password===false, 'is-valid': password===true}" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary" (click)="logIn(_email.value, _password.value)">Login</button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+</div>

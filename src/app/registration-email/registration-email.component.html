@@ -1,0 +1,63 @@
+<div class="row background">
+  <div class="logo" [routerLink]="['/registration']">
+
+  </div>
+  <br>
+  <div class="reg-type">
+    <form *ngIf="firstPart;else secondPart">
+      <div class="form-group">
+        <label for="name" class="sr-only">First Name</label>
+        <input name="name" #name id="name" type="text" (blur)="checkFirstName(name.value)" [ngClass]="{'is-invalid': firstName===false, 'is-valid': firstName===true}" class="form-control " minlength="1" (ngModel)="user.FirstName" required placeholder="First Name">
+      </div>
+      <div class="form-group">
+        <input type="text"  #last class="form-control" (blur)="checkLastName(last.value)" [ngClass]="{'is-invalid': lastName===false, 'is-valid': lastName===true}"  minlength="1" required placeholder="Last Name">
+      </div>
+      <div class="form-group">
+        <input type="text" #house class="form-control" (blur)="checkHouseNumber(house.value)" [ngClass]="{'is-invalid': houseNumber===false, 'is-valid': houseNumber===true}" required placeholder="House Number">
+      </div>
+      <div class="form-group">
+        <input type="text"  #address class="form-control" (blur)="checkStreet(address.value)" [ngClass]="{'is-invalid': street===false, 'is-valid': street===true}" required placeholder="Address">
+      </div>
+      <div class="form-group">
+        <input type="text"  #post class="form-control" (blur)="checkPostalCode(post.value)" [ngClass]="{'is-invalid': postalCode===false, 'is-valid': postalCode===true}" required placeholder="PostalCode">
+      </div>
+      <div class="form-group">
+        <input type="text" #_city class="form-control" (blur)="checkCity(_city.value)" [ngClass]="{'is-invalid': city===false, 'is-valid': city===true}" required placeholder="City">
+      </div>
+      <div class="form-group">
+        <input type="text" #_country class="form-control" (blur)="checkCountry(_country.value)" [ngClass]="{'is-invalid': country===false, 'is-valid': country===true}" required placeholder="Country">
+      </div>
+      <button class="btn btn-primary" type="button" (click)="clickContinue(name.value, last.value, house.value, address.value, post.value, _city.value,_country.value)" >Continue</button>
+      <div class="alert alert-danger" *ngIf="firstAlertEnable" role="alert">
+        You have to fill all inputs
+      </div>
+    </form>
+    <ng-template #secondPart>
+      <form >
+        <div class="form-group">
+          <input type="text" class="form-control" #_phone (blur)="checkPhone(_phone.value)" [ngClass]="{'is-invalid': phone===false, 'is-valid': phone===true}"  required placeholder="Telephone number">
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" #_email (blur)="checkEmail(_email.value)" [ngClass]="{'is-invalid': email===false, 'is-valid': email===true}"  required placeholder="Email">
+        </div>
+        <br>
+        <br>
+        <div class="form-group">
+          <input type="password" class="form-control" #_password (blur)="checkPassword(_password.value)" [ngClass]="{'is-invalid': password===false, 'is-valid': password===true}"  required placeholder="Password">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" #_passwordVer (blur)="checkPasswordVerify(_passwordVer.value)" [ngClass]="{'is-invalid': passwordVerify===false, 'is-valid': passwordVerify===true}"  required placeholder="Confirm Password">
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input">
+            By ticking this box ,you accept and declare you have read the <a href="">EULA, Terms and Conditions</a>
+          </label>
+        </div>
+
+        <button class="btn btn-primary" type="button" (click)="clickRegister(_email.value,_phone.value,_password.value)" >Register</button>
+      </form>
+    </ng-template>
+
+  </div>
+</div>

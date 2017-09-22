@@ -1,0 +1,47 @@
+$grey: #E2E2E2;
+$lightBlue: #8AB1D3;
+$lightBlueHover: #A6C2D9;
+$mediumBlue: #6397C4;
+$darkBlue: #417BAD;
+
+$yellow: #ffffc6;
+$darkGrey: #666666;
+
+.heading {
+  background-color: $grey;
+  width: 100%;
+  text-align: center;
+  border: solid $darkGrey 2px;
+  border-left-width: 0;
+  border-right-width: 0;
+  h2 {
+    text-transform: capitalize;
+    font-weight: 200;
+    margin: .5rem 0;
+  }
+}
+
+.information {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  .col {
+    width: 49%;
+    display: inline-block;
+    overflow: hidden;
+    &.head{
+      text-transform: capitalize;
+    }
+    &.icon{
+      padding: 1rem 1.5rem 1rem 0;
+      text-align: right;
+      font-size: 4.5rem;
+      color: $darkBlue;
+    }
+    &.left {
+      text-align: left;
+      padding: 1rem 0 1rem 1.5rem;
+    }
+
+  }
+}

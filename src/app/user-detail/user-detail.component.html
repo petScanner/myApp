@@ -1,0 +1,54 @@
+<div class="container-fluid"> <div class="row">
+  <div class="heading">
+    <h2>user information</h2>
+  </div>
+  <div class="information">
+    <div class="col head">
+      First Name:
+    </div>
+    <div class="col">{{user.firstName}}</div>
+    <div class="col head">
+      Last Name:
+    </div>
+    <div class="col">{{user.lastName}}</div>
+    <br>
+    <br>
+    <div class="col head">
+     house number
+    </div>
+    <div class="col">{{user.address.houseNumber}}</div>
+    <div class="col head">
+      address:
+    </div>
+    <div class="col">{{user.address.street}}</div>
+    <div class="col head">
+      city:
+    </div>
+    <div class="col">{{user.address.city}}</div>
+    <div class="col head">
+      Postal code:
+    </div>
+    <div class="col">{{user.address.postalCode}}</div>
+    <div class="col head">
+     country:
+    </div>
+    <div class="col">{{user.address.country}}</div>
+    <br>
+    <br>
+    <div class="col head">
+     telephone:
+    </div>
+    <div class="col">{{user.phone}}</div>
+    <div class="col head">
+     Email:
+    </div>
+    <div class="col">{{user.email}}</div>
+    <div class="col icon" (click)="backClicked()">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    </div>
+    <div class="col icon left" [routerLink]="['/user-edit']">
+      <i class="fa fa-pencil" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>
+</div>

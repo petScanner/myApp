@@ -1,0 +1,49 @@
+.heading {
+  width: 100%;
+  background-color: #383838;
+  color: #FFFFFF;
+  padding: .5rem;
+  border-bottom: 5px solid #666666; }
+  .heading .chip-number {
+    vertical-align: middle;
+    display: inline-block;
+    width: 49%;
+    overflow: hidden;
+    white-space: pre-line; }
+    .heading .chip-number span {
+      float: left; }
+      .heading .chip-number span.number {
+        font-weight: bold; }
+  .heading h2 {
+    width: 49%;
+    display: inline-block;
+    font-size: 1.7rem;
+    vertical-align: -webkit-baseline-middle; }
+
+.temperatures {
+  width: 100%;
+  background-color: #FFFFFF;
+  color: #000000; }
+  .temperatures .temperature {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+    padding: .5rem 0; }
+    .temperatures .temperature i {
+      color: #6397C4; }
+    .temperatures .temperature .number {
+      min-width: 12%;
+      text-align: center; }
+    .temperatures .temperature .name {
+      width: 32%; }
+      .temperatures .temperature .name .name-value {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden; }
+    .temperatures .temperature .heart {
+      font-size: 1.7rem;
+      width: 44%;
+      text-align: center; }
+
+/*# sourceMappingURL=temperature.component.css.map */

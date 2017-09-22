@@ -1,0 +1,30 @@
+app-pet-list {
+  width: 100%; }
+
+.background {
+  background-color: #E2E2E2;
+  min-height: 91vh; }
+
+.no-padding {
+  padding: 0 !important; }
+
+.dashboard {
+  border: solid #666666 2px;
+  border-left-width: 0;
+  border-right-width: 0;
+  width: 100%;
+  height: fit-content; }
+  .dashboard .item {
+    color: #666666;
+    margin: 1rem 0;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 49%;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase; }
+    .dashboard .item .icon {
+      color: #417BAD;
+      font-size: 4rem; }
+
+/*# sourceMappingURL=home.component.css.map */

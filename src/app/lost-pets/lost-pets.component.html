@@ -1,0 +1,36 @@
+<h1>{{ title }}</h1>
+
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<div class="container-fluid">
+  <div class="row">
+    <agm-map [latitude]="lat" [fitBounds]="fit" [longitude]="lng"  [scaleControl]="true" (boundsChange)="change($event)">
+      <agm-marker [latitude]="lat" [longitude]="lng" ></agm-marker>
+      <agm-marker [latitude]="40.714" [longitude]="-74.00599999999997"></agm-marker>
+      <agm-marker class="agm-marker" *ngIf="point" [latitude]="point.lat" [label]="point.pet.name" [longitude]="point.lng" >
+        <agm-snazzy-info-window [maxWidth]="800" [maxHeight]="1572">
+          <ng-template>
+            <div class="window">
+              <div class="img">
+                <img src="https://indigodesigned.com/share/embed/jjbn0rvemqkv/n3zqrp/assets/french%20bulldog%20boston%20terrier.jpg">
+              </div>
+              <div class="desc-left">
+                <h4>{{point.pet.name}}</h4>
+                <p>{{point.pet.breed}}</p>
+                <p>{{point.pet.colour}} and {{point.pet.colour2}}</p>
+                <p> {{point.pet.user_email}}</p>
+                <p>{{point.pet.user_phones}}</p>
+                <p>{{point.pet.createdAt | date}}</p>
+              </div>
+              <div class="desc-full">
+                <h5>Lost Information</h5>
+                <p>{{point.pet.lostInfo.desc}}</p>
+              </div>
+            </div>
+
+          </ng-template>
+        </agm-snazzy-info-window>
+      </agm-marker>
+    </agm-map>
+  </div>
+</div>

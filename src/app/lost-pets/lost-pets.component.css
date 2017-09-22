@@ -1,0 +1,24 @@
+agm-map {
+  width: 100%;
+  height: 82vh; }
+
+.window {
+  background-color: #383838;
+  color: #FFFFFF; }
+  .window .img {
+    display: inline-block;
+    width: 40%;
+    overflow: hidden;
+    vertical-align: text-top; }
+    .window .img img {
+      width: 100%; }
+  .window .desc-left {
+    display: inline-block;
+    width: 50%;
+    vertical-align: text-top;
+    padding: 2rem; }
+  .window .desc-full {
+    width: 100%;
+    text-align: center; }
+
+/*# sourceMappingURL=lost-pets.component.css.map */

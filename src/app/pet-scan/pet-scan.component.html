@@ -1,0 +1,31 @@
+<div class="background">
+  <div class="heading">
+    <h2>{{Name}} scan history</h2>
+  </div>
+  <p class="registered"><span>First time registered: </span>{{RegisteredDate | date: 'mediumDate'}}</p>
+  <div class="scans" *ngIf="scans">
+    <div class="scan" *ngFor="let scan of scans; let i =index">
+      <div class="number">
+        #{{i +1}}
+      </div>
+      <div class="paw">
+        <i class="fa fa-paw paw" aria-hidden="true"></i>
+      </div>
+      <div class="name">
+        <span *ngIf="scan.userName">{{scan.userName}}</span>
+      </div>
+      <div class="date">
+        {{scan.createdAt | date:'short'}}
+      </div>
+      <div class="loc">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+      </div>
+    </div>
+
+  </div>
+  <div class="back">
+    <i class="fa fa-arrow-left" aria-hidden="true" (click)="clickClose()"></i>
+  </div>
+</div>
+
+

@@ -1,0 +1,14 @@
+<div class="heading">
+  <h2 (click)="clickBack()"><i class="fa fa-chevron-left" aria-hidden="true"></i> {{pet.name}}</h2>
+  <div class="chip-number"><span>Chip number &nbsp;&nbsp;</span><span class="number">{{pet.id}}</span></div>
+</div>
+
+<div class="temperatures" *ngIf="temperatures">
+  <div class="temperature" *ngFor="let temp of temperatures; let i = index">
+    <div class="number">#{{i +1}}</div>
+    <div class="avatar"><i class="fa fa-user" aria-hidden="true"></i></div>
+    <div class="name"> <div class="name-value">{{temp.userName}}</div>
+    {{temp.createdAt | date:'short'}}</div>
+    <div class="heart">{{temp.temp}} °C <i class="fa fa-heartbeat" aria-hidden="true"></i></div>
+  </div>
+</div>

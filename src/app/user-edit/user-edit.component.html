@@ -1,0 +1,60 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="heading">
+      <h2>user edit</h2>
+    </div>
+    <form>
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" [(ngModel)]="user.firstName" name="name" class="form-control" id="firstName">
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" [(ngModel)]="user.lastName" name="lastName" class="form-control" id="lastName" >
+      </div>
+      <div class="form-group">
+        <label for="houseNumber">House Number</label>
+        <input type="text" [(ngModel)]="user.address.houseNumber" name="houseNumber" class="form-control" id="houseNumber" >
+      </div>
+      <div class="form-group">
+        <label for="street">Street</label>
+        <input type="text" [(ngModel)]="user.address.street" name="street"  class="form-control" id="street">
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" [(ngModel)]="user.address.city" name="city" class="form-control" id="city" >
+      </div>
+      <div class="form-group">
+        <label for="postalCode">postalCode</label>
+        <input type="text" [(ngModel)]="user.address.postalCode" name="postalCode" class="form-control" id="postalCode">
+      </div>
+      <div class="form-group">
+        <label for="country">country</label>
+        <input type="text" [(ngModel)]="user.address.country" name="country" class="form-control" id="country">
+      </div>
+      <div class="form-group">
+        <label for="telephone">telephone</label>
+        <input type="text" [(ngModel)]="user.phone" (blur)="checkPhone()"  [ngClass]="{'is-invalid': phone===false, 'is-valid': phone===true}"  name="phone" class="form-control" id="telephone">
+      </div>
+      <div class="form-group">
+        <label for="confirmTelephone">confirm telephone</label>
+        <input type="text" (blur)="checkPhone()"  [ngClass]="{'is-invalid': phone===false, 'is-valid': phone===true}"   [(ngModel)]="confirmPhone" name="confirm-phone" class="form-control" id="confirmTelephone" >
+      </div>
+      <div class="form-group">
+        <label for="email">email</label>
+        <input type="email" (blur)="checkEmail()"  [ngClass]="{'is-invalid': email===false, 'is-valid': email===true}" [(ngModel)]="user.email" name="email" class="form-control" id="email">
+      </div>
+      <div class="form-group">
+        <label for="cofirm_email">cofirm email</label>
+        <input type="email" (blur)="checkEmail()"  [ngClass]="{'is-invalid': email===false, 'is-valid': email===true}" [(ngModel)]="confirmEmail" name="confirm-email" class="form-control" id="cofirm_email">
+      </div>
+      <div class="icon-frame" (click)="backClicked()">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <div class="icon-frame" (click)="onClickEdit()">
+        <i class="fa fa-check" aria-hidden="true"></i>
+      </div>
+    </form>
+  </div>
+
+</div>

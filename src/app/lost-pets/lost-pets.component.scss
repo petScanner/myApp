@@ -1,0 +1,39 @@
+$grey: #E2E2E2;
+$lightBlue: #8AB1D3;
+$darkBlue: #417BAD;
+$lightBlueHover: #A6C2D9;
+$yellow: #ffffc6;
+$darkGrey: #666666;
+$mediumGrey: #888888;
+$lightBlack: #383838;
+$lost: #874006;
+
+agm-map {
+  width: 100%;
+  height: 82vh;
+}
+
+.window {
+  background-color: $lightBlack;
+  color: #FFFFFF;
+  .img {
+    display: inline-block;
+    width: 40%;
+    overflow: hidden;
+    vertical-align: text-top;
+    img {
+      width: 100%;
+    }
+  }
+  .desc-left {
+    display: inline-block;
+    width: 50%;
+    vertical-align: text-top;
+    padding: 2rem;
+  }
+  .desc-full {
+    width: 100%;
+    text-align: center;
+  }
+}
+

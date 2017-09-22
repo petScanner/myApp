@@ -1,0 +1,43 @@
+$grey: #E2E2E2;
+$lightBlue: #8AB1D3;
+$lightBlueHover: #A6C2D9;
+$mediumBlue: #6397C4;
+$darkBlue: #417BAD;
+
+$yellow: #ffffc6;
+$darkGrey: #666666;
+
+.heading {
+  background-color: $grey;
+  width: 100%;
+  text-align: center;
+  border: solid $darkGrey 2px;
+  border-left-width: 0;
+  border-right-width: 0;
+  h2 {
+    text-transform: capitalize;
+    font-weight: 200;
+    margin: .5rem 0;
+  }
+}
+form{
+  width: 90%;
+  margin: 2rem auto;
+  .form-group {
+    margin-bottom: .5rem;
+    label{
+      text-transform: capitalize;
+    }
+  }
+  .icon-frame {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 3.5rem;
+    color: $darkBlue;
+  }
+
+}
+
+

@@ -1,0 +1,91 @@
+$grey :#E2E2E2;
+$lightBlue : #8AB1D3;
+$lightBlueHover: #A6C2D9;
+$mediumBlue: #6397C4;
+$darkBlue : #417BAD;
+
+$yellow: #ffffc6;
+$darkGrey: #666666;
+
+.background{
+  background-color: $grey;
+  width: 100%;
+  height: 100vh;
+}
+
+.heading {
+  background-color:$grey;
+  width: 100%;
+  text-align: center;
+  border: solid $darkGrey 2px;
+  border-left-width: 0;
+  border-right-width: 0;
+  h2 {
+    text-transform: capitalize;
+    font-weight: 200;
+  }
+}
+.registered{
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: solid 1px;
+  margin: 0;
+
+  span {
+    font-weight: bold;
+  }
+}
+.scans {
+  width: 100%;
+  height: 74vh;
+  overflow: scroll;
+}
+.scan {
+  display: flex;
+  width: 97%;
+  margin: auto;
+  flex-direction:  row;
+  justify-content: flex-start;
+  font-size: 1rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: solid $darkGrey .8px;
+
+
+  i {
+    color: $mediumBlue;
+    font-size: 2rem;
+  }
+  .number {
+    width: 12%;
+  }
+  .paw {
+    width: 12%;
+  }
+
+  .name{
+    text-transform: capitalize;
+    width: 33%;
+    font-weight: 600;
+  }
+  .date {
+    max-width: 33%;
+    text-align: center;
+  }
+  .loc{
+    width: 10%;
+    text-align: left;
+  }
+
+}
+.back {
+  position: fixed;
+  bottom:0%;
+  width:100%;
+  text-align: center;
+  font-size: 3rem;
+  color: $darkGrey;
+  background-color: $grey;
+  border-top: solid $darkGrey .8px;
+}
