@@ -17,7 +17,7 @@ export class UserService {
     if (this.User) {
       return this.User;
     } else {
-      this.router.navigate(['welcome']);
+      this.router.navigate(['/welcome']);
     }
   }
 
