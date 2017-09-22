@@ -6,7 +6,7 @@ import {User} from './user.model';
 
 @Injectable()
 export class RegistrationService {
-  private apiServer = 'https://petscanner-api.herokuapp.com/auth/';
+  private apiServer = 'https://pet-scanner-api.herokuapp.com/auth/';
 
   constructor(private http: Http) {}
 

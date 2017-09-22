@@ -8,7 +8,7 @@ export class UserService {
 
   private User: User;
 
-  private apiServer = 'https://petscanner-api.herokuapp.com/users/';
+  private apiServer = 'https://pet-scanner-api.herokuapp.com/users/';
 
   constructor(private http: Http) { }
 

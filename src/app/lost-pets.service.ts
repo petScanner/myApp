@@ -6,7 +6,7 @@ import {Observable} from "rxjs/Observable";
 @Injectable()
 export class LostPetsService {
 
-  private apiServer = 'https://petscanner-api.herokuapp.com/lost-pets/';
+  private apiServer = 'https://pet-scanner-api.herokuapp.com/lost-pets/';
 
   constructor(private http: Http) {}
 
