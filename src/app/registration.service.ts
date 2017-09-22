@@ -6,7 +6,7 @@ import {User} from './user.model';
 
 @Injectable()
 export class RegistrationService {
-  private apiServer = 'https://petscanner-api.herokuapp.com/pets/';
+  private apiServer = 'https://petscanner-api.herokuapp.com/auth/';
 
   constructor(private http: Http) {}
 
@@ -15,7 +15,7 @@ export class RegistrationService {
     const body = JSON.stringify(user);
     headers.append('Content-Type', 'application/json');
     const options = new RequestOptions({ headers: headers });
-    return this.http.post(this.apiServer + 'auth/register', body, options)
+    return this.http.post(this.apiServer + 'register', body, options)
       .map(response => {
         console.log(response);
       });

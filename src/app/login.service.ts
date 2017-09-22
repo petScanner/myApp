@@ -7,7 +7,7 @@ import {UserService} from './user.service';
 
 @Injectable()
 export class LoginService {
-  private apiServer = 'https://petscanner-api.herokuapp.com/pets/';
+  private apiServer = 'https://petscanner-api.herokuapp.com/auth/';
 
   constructor(private http: Http, private userService: UserService) {}
 
@@ -16,7 +16,7 @@ export class LoginService {
     const body = JSON.stringify({email: email, password: password});
     headers.append('Content-Type', 'application/json');
     const options = new RequestOptions({ headers: headers });
-    return this.http.post(this.apiServer + 'auth/login', body, options)
+    return this.http.post(this.apiServer + 'login', body, options)
       .map(response => {
         if (response.ok) {
           if (response.json().data) {

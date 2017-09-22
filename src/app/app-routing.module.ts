@@ -16,7 +16,7 @@ import {PetDetailComponent} from "./pet-detail/pet-detail.component";
 import {LostPetsComponent} from "./lost-pets/lost-pets.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/welcome', pathMatch: 'full' },
   { path: 'welcome',  component: WelcomeComponent },
   { path: 'registration', component: RegistrationTypeComponent },
   {path: 'registration-email', component: RegistrationEmailComponent },
