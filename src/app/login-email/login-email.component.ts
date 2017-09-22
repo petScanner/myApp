@@ -8,6 +8,9 @@ import {LoginService} from "../login.service";
   styleUrls: ['./login-email.component.css'],
   providers: [LoginService]
 })
+/**
+ * Login with email component
+ */
 export class LoginEmailComponent implements OnInit {
 
   email;
@@ -26,6 +29,7 @@ export class LoginEmailComponent implements OnInit {
     }
   }
 
+  //Send request to loginService
   logIn(email, password) {
     if (this.password && this.email) {
       this.loginService.logIn(email, password).subscribe(response => {

@@ -10,25 +10,29 @@ import {Pet} from "../pet.model";
   styleUrls: ['./lost-pets.component.css'],
   providers: [LostPetsService]
 })
+
+/**
+ * Example of the map with lost pets markers, when user changes viewable area send request to the server for lost pet in
+ * selected area.
+ */
 export class LostPetsComponent implements OnInit {
 
-  title: string = 'My first AGM project';
+  title: string = 'Lost Pets';
   lat: number = 51.678418;
   lng: number = 7.809007;
   point: PetMarker;
-  fit
   pets: Pet[];
 
 
   constructor(private lostPetsService: LostPetsService) {
   }
 
+  // when component is ready call function to get users location
   ngOnInit() {
-    //this.getLocation();
-
-
+    this.getLocation();
   }
-
+  // call when user change bounds (viewable area)
+  // send request to the server for lost pets
   change($event) {
     const bound = $event;
     const boundObject = {minLng: bound.b.b, maxLng: bound.b.f, minLat: bound.f.b, maxLat: bound.f.f};
@@ -46,6 +50,9 @@ export class LostPetsComponent implements OnInit {
     });
   }
 
+  /**
+   * if browser supports geolocation and is enabled
+   */
   getLocation() {
     if ('geolocation' in navigator) {
       let self = this;

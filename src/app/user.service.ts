@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {User} from './user.model';
 import {Observable} from 'rxjs/Observable';
 import {RequestOptions, Headers, Http} from '@angular/http';
+import {Router} from "@angular/router";
 
 @Injectable()
 export class UserService {
@@ -10,10 +11,14 @@ export class UserService {
 
   private apiServer = 'https://pet-scanner-api.herokuapp.com/users/';
 
-  constructor(private http: Http) { }
+  constructor(private http: Http, private router: Router) { }
 
   getUser(): User {
-    return this.User;
+    if (this.User) {
+      return this.User;
+    } else {
+      this.router.navigate(['welcome']);
+    }
   }
 
   setUser(user: User) {

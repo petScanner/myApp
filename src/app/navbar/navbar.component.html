@@ -2,24 +2,24 @@
   <md-sidenav #sidenav class="menu-list">
     <h3>PetScanner</h3>
     <div class="items">
-      <div class="item">
+      <div class="item" [routerLink]="['/user']">
         <i class="fa fa-user icon icon" aria-hidden="true"></i>
         <br>
         user info
       </div>
-      <div class="item">
+      <div class="item" [routerLink]="['/lost-pets']">
         <i class="fa fa-frown-o icon icon" aria-hidden="true"></i>
         <br>
         lost pets
 
       </div>
-      <div class="item">
+      <div class="item" >
         <i class="fa fa-plus icon icon" aria-hidden="true"></i>
         <br>
         add lost pet
 
       </div>
-      <div class="item">
+      <div class="item" [routerLink]="['/scans']">
         <i class="fa fa-search icon icon" aria-hidden="true"></i>
         <br>
         my scans
